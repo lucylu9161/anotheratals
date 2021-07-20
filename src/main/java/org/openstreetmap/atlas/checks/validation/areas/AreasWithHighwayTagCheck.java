@@ -90,7 +90,7 @@ public class AreasWithHighwayTagCheck extends BaseCheck<Long>
                         final Set<Edge> connectedBadEdges = walker.collectEdges().stream()
                                 .filter(Edge::isMasterEdge).collect(Collectors.toSet());
                         connectedBadEdges
-                                .forEach(badEdge -> this.markAsFlagged(badEdge.getOsmIdentifier()));
+                                .forEach(badEdge -> this.markAsFlagged(badEdge.getOsmIdentifier()));   
                         results = new HashSet<>(connectedBadEdges);
                     }
                     else
